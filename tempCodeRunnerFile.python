@@ -1,0 +1,21 @@
+import asyncio
+
+
+m=0
+n=0
+async def acc():
+    if m<=100:
+        m+=1
+
+async def bcc():
+    if n<=100:
+        n+=1
+
+
+async def main():
+    await asyncio.gather(acc(), bcc())
+
+    print("{ acc.m}and{bcc.n}")
+
+if __name__ == '__main__':
+    main()
